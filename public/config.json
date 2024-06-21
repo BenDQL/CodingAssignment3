@@ -1,0 +1,30 @@
+[
+  {
+    "img": "img_1.JPG",
+    "iso": "100",
+    "lens": "35mm",
+    "fRatio": "4.5",
+    "sec": "1/1600"
+  },
+  {
+    "img": "img_2.JPG",
+    "iso": "400",
+    "lens": "50mm",
+    "fRatio": "1.8",
+    "sec": "1/1600"
+  },
+  {
+    "img": "img_3.JPG",
+    "iso": "400",
+    "lens": "50mm",
+    "fRatio": "1.8",
+    "sec": "1/640"
+  },
+  {
+    "img": "img_4.JPG",
+    "iso": "2500",
+    "lens": "50mm",
+    "fRatio": "2.0",
+    "sec": "1/2500"
+  }
+]

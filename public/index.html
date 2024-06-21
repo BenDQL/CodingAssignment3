@@ -1,9 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
-    <title> b l a n k </title>
+  <title>Creative Coding Assignment 3</title>
+  <script
+    language="javascript"
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"
+  ></script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-   <canvas id="cnv_element"></canvas>
-   <script src="script.js"></script>
+  <div class="container">
+    <div class="album-wrapper"><div class="album"></div></div>
+    <section id="upload-section">
+      <form
+        action="/api/upload"
+        method="post"
+        enctype="multipart/form-data"
+        id="photo-upload"
+      >
+        <div class="card">
+          <div class="upload-form">
+            <input
+              name="file"
+              type="file"
+              id="imgfile"
+              multiple
+              onchange="loadSelectedImage()"
+            />
+            <div class="form-input">
+              <label for="iso">ISO:</label>
+              <input type="text" id="iso" name="iso" required size="10" />
+            </div>
+            <div class="form-input">
+              <label for="lens">LENS:</label>
+              <input
+                type="text"
+                id="lens"
+                name="lens"
+                required
+                size="10"
+              /><span style="margin-left: 10px">mm</span>
+            </div>
+            <div class="form-input">
+              <label for="lens">F:</label>
+              <input type="text" id="fRatio" name="fRatio" required size="10" />
+            </div>
+            <div class="form-input">
+              <label for="lens">Sec:</label>
+              <input type="text" id="sec" name="sec" required size="10" />
+            </div>
+            <button type="submit" id="upload-btn" disabled>Upload</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div id="canvas-wrapper"></div>
+  </div>
+  <script src="script.js"></script>
+  <script src="photoZoom.js"></script>
 </body>

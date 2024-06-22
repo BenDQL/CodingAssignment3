@@ -18,13 +18,13 @@ body {
 
 .album-wrapper {
   grid-area: album;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .album {
   display: flex;
-  overflow-x: auto;
   padding: 60px;
+  width: max-content;
 }
 
 .card {

@@ -27,9 +27,12 @@ class Card {
     card.appendChild(tag);
     card.addEventListener("click", () => {
       if (zoomedPhoto) {
-        zoomedPhoto.remove();
+        zoomedPhoto.remove(); // Remove the previous one from canvas if selecting another one
       }
       zoomedPhoto = selectPhotoToZoom(`images/${this.img}`);
+      document.getElementById(
+        "photo-params"
+      ).textContent = `ISO: ${this.iso}, Lens: ${this.lens}mm, F: ${this.fRatio}, SEC: ${this.sec}`;
     });
     return card;
   }
